@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Verify Sites</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<form action="{{ url_for('update_status') }}" method=post>
+  <input type="submit" class="hide" id="input_submit" value="Update Database"> 
+  <input type="text" class="hide" id="input_url" name="input_url" value="">
+  <input type="text" class="hide" id="input_status_code" name="input_status_code" value="">
+  <p></p>
+  <table class="tab">
+    <tr class="tab_tr_head">
+      <th class="tab_th">Status</th>
+      <th class="tab_th">URL</th>
+      <th class="tab_th">Image</th>
+    </tr>
+    {% block body %}{% endblock %}
+  </table>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>

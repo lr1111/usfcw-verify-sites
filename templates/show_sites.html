@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block body %}
+  {% for row in rows %}
+    <tr class="tab_tr">
+      <td class="tab_td tab_td_3">
+          <select id={{ row.url }} class="select_status">
+            <option value="{{ row.status_code }}" selected="selected">{{ row.status_code }}</option>
+            <option value="ACTIVE">ACTIVE</option>
+            <option value="BROKEN">BROKEN</option>
+            <option value="FIX">FIX</option>
+            <option value="TBD">TBD</option>
+          </select>
+      </td>
+      <td class="tab_td tab_td_1"><a href="http://www.{{ row.url }}" target="_blank">http://www.{{ row.url }}</a></td>
+      <td class="tab_td tab_td_2">
+        <div class="tab_td_2_div">
+          <img class="tab_td_2_div_img" src="/static/site_images/{{ row.save_as }}.png">
+        </div>
+      </td>
+    </tr>
+  {% endfor %}
+{% endblock %}

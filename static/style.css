@@ -1,0 +1,40 @@
+a {
+    color: blue;
+}
+.hide {
+  /* COMMENT THIS IF YOU CHOOSE TO BATCH UPDATE */
+  display: none;
+}
+.tab {
+  border-collapse: collapse;
+  width: 100%;
+}
+.tab, .tab_th, .tab_td {
+  border: 1px solid black;
+}
+.tab_tr_head {
+  height: 40px;
+  background-color: rgba(158, 158, 158, .61);
+}
+.tab_tr, .tab_td_2_div {
+  height: 200px;
+} 
+.tab_td_3 {
+  width:  10%;
+  text-align: center;
+}
+.tab_td_1 {
+  width:  20%;
+  text-align: center;
+}
+.tab_td_2 {
+  width: 70%;
+  padding: 0;
+}
+.tab_td_2_div {
+  width: 100%;
+  overflow: auto;
+}
+.tab_td_2_div_img {
+  width: 100%;
+}
